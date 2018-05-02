@@ -1,0 +1,9 @@
+[package]
+name = "fib_rs"
+version = "0.1.0"
+authors = ["hm"]
+
+[lib]
+name = "fib"
+path = "src/fib.rs"
+crate-type = ["dylib"]

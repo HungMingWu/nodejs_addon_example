@@ -1,0 +1,17 @@
+{
+  "name": "nodejs_extdemo",
+  "version": "1.0.0",
+  "description": "nodejs extension demo",
+  "main": "index.js",
+  "scripts": {
+    "demo": "npm install && npm run build && node index.js",
+    "build": "npm run build_cpp && npm run build_rs",
+    "build_cpp": "cd fib_cpp && node-gyp configure build && cp build/Release/fib.node ../lib",
+    "build_rs": "cd fib_rs && cargo build --release && cp target/release/libfib.so ../lib"
+  },
+  "author": "HungMingWu",
+  "license": "ISC",
+  "devDependencies": {
+    "ffi": "^2.2.0"
+  }
+}
